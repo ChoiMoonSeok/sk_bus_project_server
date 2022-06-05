@@ -22,6 +22,10 @@ class AccPost(Resource):
 
         return {'acc_id' : idx, 'acc_x' : acc_x[idx], 'acc_y': acc_y[idx]}
 
+    def get(self): # get 함수 정의, 데이터 입력
+        return {'acc_id': count-1, 'acc_x' : acc_x[count-1], 'acc_y': acc_y[count-1]}
+
+
 @Acc.route('/<int:acc_id>') # acc_id에 맞는 데이터 조회
 class AccSimple(Resource):
     def get(self, acc_id): # 데이터 가져오기
